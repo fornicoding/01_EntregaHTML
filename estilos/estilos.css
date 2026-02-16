@@ -71,8 +71,9 @@ h1, h2, h3 {
   display: flex;
   align-items: center;
   border-bottom: 1px solid var(--color-negro);
-  gap:  104px;
+  gap: 104px;
   padding: 20px 0;
+  background-color: var(--color-blanco);
 
   /* Apartado opcional 2 */
   position: fixed;
@@ -95,6 +96,7 @@ h1, h2, h3 {
   justify-content: space-between;
   gap: 32px;
   align-self: flex-start;
+
 }
 
 .navbar-lista li a {
@@ -152,3 +154,42 @@ footer {
 
 
 /* Fin de apartado opcional 1 */
+
+/* Apartado extra final (El apartado solo especifica el navbar y el footer,
+pero tambien muestra las imagenes mostrandose en una sola columna,
+tampoco indica si el navbar debe tener funcionalidad.) En la captura de el diseño responsive
+parece todo demasiado grande para ser de 920px, como si todo se hubiese agrandado.  */
+
+@media (max-width: 920px) {
+  
+  .navbar-lista, .navbar-derecha {
+    display:none;
+  }
+  .navbar-container {
+    gap: 0;
+  }
+  .navbar-izquierda {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+  .card-container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
+  }
+  .footer-lista {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .footer-lista li {
+    padding: 20px 0;
+    border-bottom: 1px solid var(--color-blanco);
+  }
+}
+
+/* Fin del apartado extra final, no termino de comprender qué propiedades se asumen cuando
+solo se pone "display: grid" y no se le pone una propiedad como "grid-template-columns: 1fr", ya que
+las imagenes de ropa solo tienen puesto "display: grid" y solo con eso quedan bastante bien, aunque no
+creo que sea la mejor práctica usarlo así. */
