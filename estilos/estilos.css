@@ -4,11 +4,20 @@
   --color-blanco: #ffffff;
   --color-negro: #212429;
 }
-
 body {
+  color: var(--color-negro);
+  background-color: var(--color-blanco);
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
+  margin: 0;
 }
+
+header, main, footer {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
 
 strong,
 b {
@@ -21,9 +30,15 @@ h1, h2, h3 {
 
 .titulo {
   font-size: 32px;
+  margin-bottom: 0;
 }
+
+.titulo::first-letter {
+  font-size: 40px;
+}
+
 .card {
-  font-size: 14px;
+  font-size: 16px;
   margin: 32px;
   margin-bottom: 0;
 }
@@ -31,14 +46,12 @@ h1, h2, h3 {
 .card img {
   border-radius: 10px;
 }
-.container {
-  max-width: 1280px;
-  margin: 120px auto 64px;
-  padding: 0 16px;
-}
 
+.container {
+    margin-top: 80px;
+}
 .card-container {
-  margin: 0 auto;
+  margin: 20px auto;
   display:flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -48,4 +61,94 @@ h1, h2, h3 {
   display: flex;
   justify-content: space-between;
   margin-top: 8px;
+  margin-left: 16px;
+  margin-right: 16px;
 }
+
+/* Apartado opcional 1 */
+.navbar-container {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--color-negro);
+  gap:  104px;
+  padding: 20px 0;
+
+  /* Apartado opcional 2 */
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  z-index: 1000;
+  /* Fin de apartado opcional 2*/
+}
+
+.navbar-derecha, .navbar-izquierda {
+  width: 120px;
+}
+.navbar-lista {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+  align-self: flex-start;
+}
+
+.navbar-lista li a {
+  text-decoration: none;
+  color: var(--color-negro);
+}
+
+.navbar-derecha {
+  margin: 0;
+  margin-left: 48px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 56px;
+}
+
+
+footer {
+    background-color: var(--color-negro);
+    padding: 20px 0;
+}
+.footer-lista {
+  font-size: 16px;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+}
+.footer-lista li {
+  display: flex;
+  align-items: center;
+}
+
+.circulo-blanco {
+  width: 52px;      
+  height: 52px;
+  border-radius: 50%;
+  background: var(--color-blanco);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+}
+
+.footer-lista li img {
+  height: 32px;
+  width: 32px
+  
+}
+.footer-lista li a {
+  text-decoration: none;
+  color: var(--color-blanco);
+}
+
+
+/* Fin de apartado opcional 1 */
